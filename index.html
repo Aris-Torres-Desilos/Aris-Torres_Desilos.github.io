@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea - Principal</title>
+    <style>
+        /* Reset de márgenes y paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fuente y color base */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f3f3;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Encabezado y navegación */
+        header {
+            background-color: #232F3E;
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff9900;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        /* Banner Promocional con Imagen de Fondo */
+        #banner {
+            width: 100%;
+            height: 300px;
+            background: url('imagenes/banner_ofertas.jpg') no-repeat center center/cover; /* Imagen de fondo actualizada */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            margin-bottom: 30px;
+        }
+
+        /* Barra de Búsqueda */
+        #barra-busqueda {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        #barra-busqueda input {
+            width: 80%;
+            max-width: 500px;
+            padding: 10px 15px;
+            font-size: 1em;
+            border: 2px solid #232F3E;
+            border-radius: 25px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        #barra-busqueda input:focus {
+            border-color: #ff9900;
+        }
+
+        /* Sección de Productos Destacados */
+        #productos-destacados {
+            padding: 0 20px 50px 20px;
+        }
+
+        #productos-destacados h2 {
+            color: #232F3E;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .productos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .producto {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .producto:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .producto img {
+            width: 100%;
+            max-height: 150px; /* Altura máxima reducida */
+            object-fit: contain; /* Mantiene la proporción sin cortar */
+            background-color: #f9f9f9; /* Fondo para mejor visualización */
+            padding: 10px; /* Espacio interno para que la imagen no toque los bordes */
+        }
+
+        .producto-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .producto-content h3 {
+            font-size: 1.2em;
+            color: #232F3E;
+            margin-bottom: 10px;
+        }
+
+        .producto-content p {
+            font-size: 0.95em;
+            color: #555;
+            height: 60px;
+            overflow: hidden;
+        }
+
+        .producto-content a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #ff9900;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .producto-content a:hover {
+            background-color: #e68a00;
+        }
+
+        /* Pie de Página */
+        footer {
+            background-color: #232F3E;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Media Queries para Responsividad */
+        @media (max-width: 768px) {
+            #banner {
+                height: 200px;
+                font-size: 2em;
+            }
+
+            .producto img {
+                max-height: 120px;
+            }
+
+            #barra-busqueda input {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            #banner {
+                height: 150px;
+                font-size: 1.5em;
+            }
+
+            .producto img {
+                max-height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Nuestra Tienda en Línea</h1>
+        <nav>
+            <ul>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+                <li><a href="registro.html">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="banner">
+        ¡Ofertas Especiales de Temporada!
+    </div>
+
+    <section id="barra-busqueda">
+        <input type="text" id="busqueda" placeholder="Busca tu producto...">
+    </section>
+
+    <section id="productos-destacados">
+        <h2>Productos Destacados</h2>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="imagenes/msigf63/msi gf63.png" alt="Laptop MSI GF63">
+                <div class="producto-content">
+                    <h3>Laptop MSI GF63</h3>
+                    <p>MSI GF63 Delgado portátil para juegos...</p>
+                    <a href="detalle_producto1.html">Ver detalles</a>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="imagenes/mac/macbook.png" alt="Apple MacBook Pro">
+                <div class="producto-content">
+                    <h3>Apple MacBook Pro</h3>
+                    <p>Apple MacBook Pro 13.3in Retina...</p>
+                    <a href="detalle_producto2.html">Ver detalles</a>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="imagenes/lenovoLOQ/lenovo gaming LOQ.png" alt="Lenovo Laptop Gaming LOQ">
+                <div class="producto-content">
+                    <h3>Lenovo Laptop Gaming LOQ</h3>
+                    <p>Lenovo Laptop Gaming LOQ 15ARP9...</p>
+                    <a href="detalle_producto3.html">Ver detalles</a>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="imagenes/asus/asus laptop tuf.png" alt="ASUS Laptop TUF Gaming">
+                <div class="producto-content">
+                    <h3>ASUS Laptop TUF Gaming</h3>
+                    <p>ASUS Laptop TUF Gaming A15 2024 FA506NC...</p>
+                    <a href="detalle_producto4.html">Ver detalles</a>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="imagenes/acernitro/acernitro5.png" alt="Acer Laptop Gaming Nitro 5">
+                <div class="producto-content">
+                    <h3>Acer Laptop Gaming Nitro 5</h3>
+                    <p>Acer Laptop Gaming Nitro 5 Modelo 2024 Core i5 12th...</p>
+                    <a href="detalle_producto5.html">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Tienda en Línea</p>
+    </footer>
+</body>
+</html>

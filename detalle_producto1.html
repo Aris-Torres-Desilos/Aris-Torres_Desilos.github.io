@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #232F3E;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        #detalle-producto {
+            display: flex;
+            flex-wrap: wrap; /* Se ajusta en pantallas pequeñas */
+            justify-content: center;
+            align-items: center;
+            margin: 50px auto;
+            max-width: 1000px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #detalle-producto img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+            flex: 1 1 300px; /* Flexibilidad para imagen en pantallas pequeñas */
+        }
+        .producto-info {
+            margin-left: 40px;
+            max-width: 600px;
+            flex: 1 1 300px; /* Flexibilidad para texto en pantallas pequeñas */
+        }
+        .producto-info h2 {
+            color: #232F3E;
+            margin: 0;
+            font-size: 24px;
+        }
+        .producto-info p {
+            font-size: 16px;
+            color: #555;
+            margin: 10px 0 20px;
+        }
+        .producto-info ul {
+            font-size: 16px;
+            color: #555;
+            padding-left: 20px;
+        }
+        .producto-info ul li {
+            margin-bottom: 10px;
+        }
+        .precio {
+            font-size: 32px;
+            color: #B12704;
+            margin: 20px 0;
+        }
+        .disponibilidad {
+            font-size: 16px;
+            color: #008a00;
+            margin-bottom: 20px;
+        }
+        .boton-compra {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #FF9900;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        .boton-compra:hover {
+            background-color: #e58e00;
+        }
+        footer {
+            background-color: #232F3E;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 50px;
+        }
+
+        /* Media queries para pantallas pequeñas */
+        @media (max-width: 768px) {
+            #detalle-producto {
+                flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+                text-align: center;
+            }
+            .producto-info {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+            .producto-info h2 {
+                font-size: 20px;
+            }
+            .precio {
+                font-size: 28px;
+            }
+        }
+
+        /* Media queries para pantallas aún más pequeñas (móviles) */
+        @media (max-width: 480px) {
+            nav ul li a {
+                font-size: 16px;
+            }
+            .producto-info p, .producto-info ul {
+                font-size: 14px;
+            }
+            .boton-compra {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+            .precio {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Detalles del Producto</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="detalle-producto">
+        <img src="imagenes/msigf63/msi gf63.png" alt="MSI GF63">
+        <div class="producto-info">
+            <h2>MSI GF63 Delgado portátil para juegos</h2>
+            <p>15.6" FHD 144Hz, Intel i5-11400H, RTX 3050, 16GB RAM, 512GB NVMe SSD, Windows 11, aluminio negro.</p>
+            <div class="precio">$16,499</div>
+            <div class="disponibilidad">Disponible</div>
+            <a href="#" class="boton-compra">Añadir al carrito</a>
+            <h3>Características</h3>
+            <ul>
+                <li>Pantalla Full HD de 15.6 pulgadas.</li>
+                <li>Procesador Intel i5-11400H de 11ª generación.</li>
+                <li>Tarjeta gráfica NVIDIA RTX 3050.</li>
+                <li>16GB de RAM y 512GB SSD.</li>
+                <li>Windows 11 preinstalado.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Tienda en Línea</p>
+    </footer>
+</body>
+</html>

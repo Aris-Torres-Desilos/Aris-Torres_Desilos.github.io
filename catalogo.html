@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #232F3E;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        #catalogo {
+            margin: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .producto {
+            position: relative;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        .producto:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .producto img {
+            max-width: 100%;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        .producto h3 {
+            font-size: 18px;
+            color: #232F3E;
+            margin: 10px 0;
+        }
+        .producto p {
+            font-size: 14px;
+            color: #555;
+            height: 40px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .producto a {
+            text-decoration: none;
+            background-color: #ff9900;
+            color: white;
+            padding: 10px;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .producto a:hover {
+            background-color: #e58e00;
+        }
+        /* Tooltip emergente para más información */
+        .producto .tooltip {
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #232F3E;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease, bottom 0.3s ease;
+        }
+        .producto:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+            bottom: -80px;
+        }
+        footer {
+            background-color: #232F3E;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .producto {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Catálogo de Productos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+                <li><a href="registro.html">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="catalogo">
+        <h2>Productos Disponibles</h2>
+
+        <div class="producto">
+            <img src="imagenes/msigf63/msi gf63.png" alt="Producto 1">
+            <h3>Laptop MSI GF63</h3>
+            <p>MSI GF63 Delgado portátil para juegos. Este producto es perfecto para ti.</p>
+            <a href="detalle_producto1.html">Ver detalles</a>
+            <div class="tooltip">Más información de MSI.</div>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/mac/macbook.png" alt="Producto 2">
+            <h3>Apple MacBook Pro</h3>
+            <p>Apple MacBook Pro 13.3in Retina...</p>
+            <a href="detalle_producto2.html">Ver detalles</a>
+            <div class="tooltip">Más información de MacBook.</div>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/lenovoLOQ/lenovo gaming LOQ.png" alt="Producto 3">
+            <h3>Lenovo Laptop Gaming LOQ</h3>
+            <p>Lenovo Laptop Gaming LOQ 15ARP9...</p>
+            <a href="detalle_producto3.html">Ver detalles</a>
+            <div class="tooltip">Más información de Lenovo LOQ.</div>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/asus/asus laptop tuf.png" alt="Producto 4">
+            <h3>ASUS Laptop TUF Gaming</h3>
+            <p>ASUS Laptop TUF Gaming A15 2024 FA506NC...</p>
+            <a href="detalle_producto4.html">Ver detalles</a>
+            <div class="tooltip">Más información de Asus TUF.</div>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/acernitro/acernitro5.png" alt="Producto 5">
+            <h3>Acer Laptop Gaming Nitro 5</h3>
+            <p>Acer Laptop Gaming Nitro 5 Modelo 2024 Core i5 12th...</p>
+            <a href="detalle_producto5.html">Ver detalles</a>
+            <div class="tooltip">Más información de Acer Nitro 5.</div>
+        </div>
+       
+        <div class="producto">
+            <img src="imagenes/victus/victus.png" alt="Producto 6">
+            <h3>HP Laptop Gamer Victus</h3>
+            <p>HP Laptop Gamer Victus Intel Core I5-12500h...</p>
+            <a href="detalle_producto6.html">Ver detalles</a>
+            <div class="tooltip">Más información de HP Victus.</div>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/tuf/tuf.png" alt="Producto 7">
+            <h3>ASUS Laptop TUF Gaming A15</h3>
+            <p>ASUS Laptop TUF Gaming A15/FA507NU-LP101W/AMD Ryzen...</p>
+            <a href="detalle_producto7.html">Ver detalles</a>
+            <div class="tooltip">Más información de Asus TUF A15.</div>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/victuss/victus2.jpg" alt="Producto 8">
+            <h3>HP Victus 15.6 </h3>
+            <p>HP Victus 15.6 i5 Laptop para juegos, 15.6 pulgadas FHD...</p>
+            <a href="detalle_producto8.html">Ver detalles</a>
+            <div class="tooltip">Más información de HP Victus 15.6 .</div>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/hp15/hp15.jpg" alt="Producto 9">
+            <h3>HP Envy x360 15-fh0002la</h3>
+            <p>HP Envy x360 15-fh0002la, Windows 11 Home...</p>
+            <a href="detalle_producto9.html">Ver detalles</a>
+            <div class="tooltip">Más información de HP Envy.</div>
+        </div>
+
+        <div class="producto">
+            <img src="imagenes/nitrooo/acernitro.jpg" alt="Producto 10">
+            <h3>Acer Laptop Gaming Nitro V15</h3>
+            <p>Acer Laptop Gaming Nitro V15 Modelo 2024...</p>
+            <a href="detalle_producto10.html">Ver detalles</a>
+            <div class="tooltip">Más información de  Nitro V15.</div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2024 Tienda en Línea</p>
+    </footer>
+</body>
+</html>
