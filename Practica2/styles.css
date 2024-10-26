@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 50px auto;
+    width: 90%;
+    max-width: 800px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #61dafb;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* Establece un tamaño fijo para las celdas */
+    gap: 10px;
+    margin: 20px 0;
+    align-self: center;
+}
+
+.cell {
+    background-color: #444;
+    border-radius: 10px;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Tamaño fijo para las celdas */
+    height: 100px; /* Tamaño fijo para las celdas */
+    cursor: pointer;
+    color: #61dafb;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #555;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #52a8d8;
+}
+
+.leaderboard {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 20px;
+}
+
+.leaderboard h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: #444;
+    padding: 10px;
+    border: 1px solid #555;
+}
+
+tbody tr {
+    background-color: #444;
+}
+
+tbody td {
+    padding: 10px;
+    border: 1px solid #555;
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #555;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .content {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .leaderboard {
+        margin-top: 0;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+thead th {
+    background-color: #444;
+    padding: 15px;
+    border: none;
+    color: #61dafb;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tbody tr {
+    transition: background-color 0.3s;
+}
+
+tbody tr:hover {
+    background-color: #555;
+}
+
+tbody td {
+    padding: 15px;
+    border: none;
+    text-align: center;
+    color: #ffffff;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #3d3d3d;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #444;
+}
+
+table thead tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+table thead tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+    margin-top: 20px; /* Ajuste para separar del tablero */
+    transition: background-color 0.3s;
+    align-self: center; /* Para centrar el botón */
+}
