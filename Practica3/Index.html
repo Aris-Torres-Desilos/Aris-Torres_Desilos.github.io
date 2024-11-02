@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscaminas</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <h1>Buscaminas</h1>
+            <div class="formulario-juego">
+                <div class="formulario">
+                    <label for="dificultad">Selecciona la dificultad:</label>
+                    <select id="dificultad">
+                        <option value="custom">Personalizado</option>
+                        <option value="facil">Fácil</option>
+                        <option value="medio">Medio</option>
+                        <option value="dificil">Difícil</option>
+                        <option value="muyDificil">Muy Difícil</option>
+                        <option value="hardcore">Hardcore</option>
+                        <option value="leyenda">Leyenda</option>
+                    </select>
+                    <div class="entrada" id="personalizado">
+                        <label for="filas">Filas:</label>
+                        <input id="filas" type="number" min="5" value="5">
+                        <label for="columnas">Columnas:</label>
+                        <input id="columnas" type="number" min="5" value="5">
+                        <label for="minas">Minas:</label>
+                        <input id="minas" type="number" min="1" value="5">
+                    </div>
+                </div>
+                <button class="btn-generar">Iniciar Juego</button>
+            </div>
+        </div>
+        <div class="contenedor-juego hidden">
+            <h2>Banderas colocadas: <span id="num-banderas">0</span> (faltan <span id="banderas-restantes"></span>)</h2>
+            <div class="juego"></div>
+            <div class="resultado-juego"></div>
+        </div>
+    </div>
+</body>
+</html>

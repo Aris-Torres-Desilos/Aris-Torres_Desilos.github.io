@@ -1,0 +1,99 @@
+body {
+    background-color: #f3f4f6;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.header h1 {
+    font-family: 'Comic Sans MS', cursive;
+    color: #ff3e3e;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.btn-generar {
+    background-color: #4a90e2;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-generar:hover {
+    background-color: #357ab8;
+}
+
+.juego {
+    display: grid;
+    background-color: #ccc;
+    border-radius: 8px;
+    padding: 0.5rem;
+    gap: 2px;
+    border: 2px solid #333;
+}
+
+.juego div {
+    width: 2rem;
+    height: 2rem;
+    background-color: #808080; /* Color gris para casillas no seleccionadas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.juego div.marcada {
+    background-color: #ffffff; /* Color blanco para casillas seleccionadas */
+}
+
+.juego div:hover {
+    background-color: #d3d3d3;
+    transform: scale(1.05);
+}
+
+.resultado-juego {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.back-red {
+    background-color: #f54242 !important;
+    color: white;
+}
+
+.back-green {
+    background-color: #42f554 !important;
+    color: white;
+}
+
+.hidden { display: none; }
+
+/* Estilo para el banner de victoria */
+.victory-banner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 2rem;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
